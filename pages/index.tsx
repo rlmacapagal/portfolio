@@ -11,11 +11,7 @@ import Projects from "@/components/Projects";
 import ContactMe from "@/components/ContactMe";
 import Link from "next/link";
 import { PageInfo, Experience, Skill, Project, Social } from "@/typings";
-import { fetchPageInfo } from "@/utils/fetchPageInfo";
-import { fetchExperiences } from "@/utils/fetchExperiences";
-import { fetchSkills } from "@/utils/fetchSkills";
-import { fetchProjects } from "@/utils/fetchProjects";
-import { fetchSocials } from "@/utils/fetchSocials";
+
 import { GetStaticProps } from "next";
 
 type Props = {
@@ -72,7 +68,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 */
 
   const pageInfo: PageInfo[] = [];
-  const experiences: Experience[] = await fetchExperiences();
+  const experiences: Experience[] = [];
   const skills: Skill[] = [
     {
       _id: "1",
@@ -227,7 +223,18 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     },
   ]; //need
 
-  const social: Social[] = await fetchSocials(); //need
+  const social: Social[] = [
+    {
+      _id: "1",
+      title: "Github",
+      url: "https://github.com/rlmacapagal",
+    },
+    {
+      _id: "2",
+      title: "Linkedin",
+      url: "https://www.linkedin.com/in/louie-macapagal",
+    },
+  ]; //need
 
   return {
     props: {

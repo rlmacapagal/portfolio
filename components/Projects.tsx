@@ -32,14 +32,26 @@ function Projects({ projects }: Props) {
               key={project._id}
             >
               <Link href={project.linkToBuild}>
-                <motion.img
-                  src={urlFor(project?.image).url()}
-                  initial={{ opacity: 0, y: -300 }}
-                  transition={{ duration: 1.2 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  style={{ width: "20vh", height: "auto" }}
-                />
+                <div
+                  style={{
+                    display: "flex",
+                    textAlign: "center",
+                    justifyContent: "center",
+                    margin: "auto",
+                  }}
+                  className="w-[100%] md:w-[30%] "
+                >
+                  <motion.img
+                    src={project.image}
+                    initial={{ opacity: 0, y: -300 }}
+                    transition={{ duration: 1.2 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    style={{
+                      width: project._id === "5" ? "70%" : "100%",
+                    }}
+                  />
+                </div>
               </Link>
 
               <div className="space-y-10 px-0 md:px-10 max-w-6xl">

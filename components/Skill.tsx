@@ -12,7 +12,7 @@ function Skill({ skill, directionLeft }: Props) {
   return (
     <div className="group relative flex cursor-pointer">
       <motion.img
-        src={urlFor(skill?.image).width(100).height(100).url()}
+        src={/*urlFor(skill?.image).width(100).height(100).url()*/ skill?.image}
         className="rounded-full  object-cover w-[10vw] h-[auto] xl:w-[5vw] xl:h-[5vw] filter group-hover:grayscale
         transition duration-300 ease-in-out "
       />

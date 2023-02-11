@@ -1,8 +1,8 @@
 interface SanityBody {
-  _createdAt: string;
+  //_createdAt: string;
   _id: string;
-  _rev: string;
-  _updatedAt: string;
+  //_rev: string;
+  //_updatedAt: string;
 }
 
 interface Image {
@@ -33,8 +33,8 @@ export interface Technology extends SanityBody {
 }
 
 export interface Skill extends SanityBody {
-  _type: "skill";
-  image: Image;
+  //_type: "skill";
+  image: string; //Image
   progress: number;
   title: string;
 }
@@ -52,12 +52,12 @@ export interface Experience extends SanityBody {
 }
 
 export interface Project extends SanityBody {
-  _type: "project";
+  //_type: "project";
   title: string;
-  image: Image;
+  image: string;
   linkToBuild: string;
   summary: string;
-  technologies: Technology[];
+  //technologies: Technology[];
 }
 
 export interface Social extends SanityBody {

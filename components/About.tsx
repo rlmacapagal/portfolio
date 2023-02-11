@@ -23,14 +23,14 @@ function About({}: Props) {
       ></motion.img>
       <div className="space-y-15 px-0 md:px-10 flex-wrap">
         <h4 className="text-3xl font-semibold mt-10">
-          "Software is at the forefront of technology" - myself
+          &quot;Software is at the forefront of technology&quot; - myself
         </h4>
         <p className="text-base mt-5">
           Being a former mechanical engineer, I was always fascinated with
-          innovations and technology. Then, I've come to realized that much of
-          technological advancements in our time comes from the tech industry.
-          Plus, I get to hone both logical and creative by building awesome
-          applications.
+          innovations and technology. Then, I&quot;ve come to realized that much
+          of technological advancements in our time comes from the tech
+          industry. Plus, I get to hone both logical and creative by building
+          awesome applications.
         </p>
       </div>
     </div>
